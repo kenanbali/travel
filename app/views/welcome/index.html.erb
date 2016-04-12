@@ -1,0 +1,29 @@
+<h1> Welcome to my Travel Site </h1>
+
+<p>Here i will talk about various states and countries to visit.</p>
+
+<p> <%= @homestate %> </p>
+<ul>
+<% @countries.each do |country| %>
+	<li><%= country %></li>
+<% end %>	
+</ul>
+
+<%#= image_tag "japan1.jpg" , alt:"Japan" id: "country" ,class: "travel-pics" %>
+<%#= image_tag "japan2.png" , alt:"Japan2" id:"country" , class: "travel-pics"%>
+<%#= image_tag "canada.jpeg" , alt: "Canada" id:"country" ,class: "travel-pics" %>
+<%#= image_tag "la.jpg" , alt:"Los Angeles,Usa" , width:"290px" id:"country" , class: "travel-pics" %>
+
+<!-- Passin images through array -->
+<%= @images.each do |image| %>
+<p><%= image_tag image,alt: "Country" %></p>
+
+<%end%>
+
+<!-- Passing images through hash -->
+<% @image_hash.each do |key,value| %>
+<p><%= image_tag value,alt: key %> </p>
+
+<%end %>
+
+
